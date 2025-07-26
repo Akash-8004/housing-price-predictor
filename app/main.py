@@ -6,8 +6,8 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load model and pipeline
-model = joblib.load("model.pkl")
-pipeline = joblib.load("pipeline.pkl")
+model = joblib.load("training/model.pkl")
+pipeline = joblib.load("training/pipeline.pkl")
 
 @app.route("/", methods=["GET", "POST"])
 def predict():

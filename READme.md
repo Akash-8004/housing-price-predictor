@@ -1,140 +1,97 @@
-# 🏡 House Price Predictor - Machine Learning Flask App
+# 🏠 Housing Price Predictor
 
-A machine learning project that predicts house prices using a trained Random Forest model on the California housing dataset. The project includes a web interface built using Flask, where users can input housing data and receive real-time predictions.
+A machine learning project that predicts house prices based on various features like location, rooms, population, and median income. Built using Scikit-learn and use as a Flask web app.
 
 ---
 
-## 🚀 Demo
+## 📌 Features
 
-Live app hosted on [Render](https://your-render-link-here) *(replace this with your actual link after deployment)*
+- End-to-end ML pipeline with data preprocessing and model training
+- Web interface for user input and live predictions
+- Clean code structure and modular design
+- Jupyter Notebook for data analysis and experimentation
+- Ready-to-train with your own dataset
 
 ---
 
 ## 📁 Project Structure
 
 
-
 housing-price-predictor/
 │
-├── static/ # Contains CSS stylesheets
-│ └── style.css
+├── app/
+│ ├── main.py # Flask web app
+│ ├── model.pkl # Trained model (not in GitHub)
+│ ├── pipeline.pkl # Preprocessing pipeline (not in GitHub)
+│ ├── static/
+│ │ └── style.css # App styling
+│ └── templates/
+│ └── index.html # HTML form for user input
 │
-├── templates/ # HTML templates for Flask app
-│ └── index.html
+├── training/
+│ ├── housing_data.xlsx # Dataset
+│ └── train_model.py # Model training script
 │
-├── model.pkl # Trained RandomForestRegressor model
-├── pipeline.pkl # Preprocessing pipeline (imputer, scaler, encoder)
-├── app.py # Flask web app to serve model predictions
-├── train_model.py # Script to train the model
-├── requirements.txt # Python dependencies
-├── README.md # Project documentation
+├── requirements.txt # Project dependencies
+├── .gitignore # Files to ignore in Git
+└── README.md # Project documentation
+
+## 📓 Jupyter Notebook
+
+You can view the full notebook [here](./notebook/house_price.ipynb).
+
+![Flask Web App UI](notebook/web_app.png)
 
 
+⚙️ How to Run Locally
+✅ Prerequisites
+Python 3.8+
 
----
+pip
 
-## 💡 Features
+📦 Install dependencies
 
-- 📊 Trained on the California Housing Dataset
-- 🔧 Preprocessing using pipelines (handling NA values, scaling, encoding)
-- 🌐 Flask-based web interface
-- 🧠 Random Forest Regression model
-- 📈 Outputs predicted `median_house_value` based on input features
-- 🎨 Styled using external CSS
-
----
-
-## 📦 Setup Instructions
-
-### ✅ Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/your-username/housing-price-predictor.git
-cd housing-price-predictor
-
-✅ Step 2: Install Dependencies
 pip install -r requirements.txt
+🧠 Train the Model
 
-✅ Step 3: Train the Model (Optional)
-If you want to retrain the model:
-
+cd training/
 python train_model.py
-This will create model.pkl and pipeline.pkl.
+This generates model.pkl and pipeline.pkl files in the app/ folder.
 
-✅ Step 4: Run the Flask App
-python app.py
-Visit http://localhost:5000 in your browser.
+🚀 Start the Flask App
 
+cd app/
+python main.py
+Open your browser and go to http://127.0.0.1:5000/
 
-🌐 Deployment (Render)
-📄 Create render.yaml
-
-services:
-  - type: web
-    name: house-price-predictor
-    env: python
-    buildCommand: ""
-    startCommand: python app.py
-    plan: free
-📋 Add requirements.txt
-
-Flask
-pandas
-scikit-learn
-joblib
-🚀 Deploy
-Push your code to GitHub.
-
-Create a free Render account: https://render.com
-
-Click "New Web Service" and connect your GitHub repo.
-
-Configure as:
-
-Build Command: ()
-
-Start Command: python app.py
-
-Environment: Python
-
-Deploy!
-
-📘 Technologies Used
+🧰 Tech Stack
 Python
 
 Pandas, NumPy
 
 Scikit-learn
 
-Flask
+Flask (for deployment)
 
-HTML5, CSS3
+HTML/CSS (for UI)
 
-Render (for hosting)
+VS Code
 
-🧠 Skills Demonstrated
-Supervised ML (Regression)
+Jupyter Notebook
 
-Data Cleaning & Feature Engineering
+📂 Dataset
+housing_data.xlsx: Contains features like total rooms, bedrooms, income, etc.
 
-One-Hot Encoding, Standardization
+Preprocessed and scaled during training pipeline.
 
-Scikit-learn Pipelines & Transformers
+📌 Important Notes
+The model.pkl and pipeline.pkl files are not included in the GitHub repo due to file size limits (>100MB).
 
-Model Deployment (Flask + Render)
+You can re-train the model using the provided script or upload smaller dummy versions for demo purposes.
 
-Git & GitHub project structuring
+## ✍️ Author
 
+**Akash**  
+📫 [LinkedIn Profile](https://www.linkedin.com/in/akash-yadav-284909321/)  
+📁 [My GitHub](https://github.com/Akash-8004)
 
-
-✍️ Author
-Akash
-GitHubhttps://github.com/Akash-8004 | https://www.linkedin.com/in/akash-yadav-284909321/
-
-📄 License
-MIT License – free to use and modify.
-
-
----
-
-Let me know if you'd like me to create this file and let you download it directly as `README.md`, or help push to GitHub.
