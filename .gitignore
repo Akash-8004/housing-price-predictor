@@ -1,0 +1,30 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore environment and OS-specific files
+.env
+*.env
+.DS_Store
+Thumbs.db
+
+# Ignore large model and pipeline files
+app/model.pkl
+app/pipeline.pkl
+
+# Ignore dataset files (optional, keep if not needed on GitHub)
+training/housing_data.xlsx
+input.csv
+output.csv
+
+# Ignore VS Code settings (if using VS Code)
+.vscode/
+
+# Ignore logs and temp files
+*.log
+*.tmp
+*.bak
