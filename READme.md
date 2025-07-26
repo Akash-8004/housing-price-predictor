@@ -46,22 +46,24 @@ You can view the full notebook [here](./notebook/house_price.ipynb).
 ⚙️ How to Run Locally
 ✅ Prerequisites
 Python 3.8+
-
 pip
 
 📦 Install dependencies
-
 pip install -r requirements.txt
+
+
 🧠 Train the Model
 
 cd training/
 python train_model.py
+
 This generates model.pkl and pipeline.pkl files in the app/ folder.
 
 🚀 Start the Flask App
 
 cd app/
 python main.py
+
 Open your browser and go to http://127.0.0.1:5000/
 
 🧰 Tech Stack
